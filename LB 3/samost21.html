@@ -1,0 +1,67 @@
+<html>                                                                  
+<head>      
+<style >
+#inp1
+{
+margin-top: 10px;
+}
+FORM{
+    align-content: center;
+}
+</style>                                                          
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script >   
+$(document).ready(function(){
+
+    $('INPUT[name="but123"]').click ( function () { 
+            var Value1=$('INPUT[name="i1"]').val() ; 
+            var Value2=$('INPUT[name="i2"]').val() ;
+            var Value3=$('INPUT[name="i3"]').val() ;
+                if (Value1 == '') 
+                {
+                     alert("введите ФИО")
+                }              
+                else
+                    {
+                        if (Value2 == '') 
+                {
+                     alert("введите город")
+                }  
+                else
+                {
+                    if (Value3 == '') 
+                {
+                     alert("введите возраст")
+                }   
+                else
+                {
+                    alert("Поздравляю с успешным прохождением квеста ты гений!!!") 
+                }
+                }
+                    }
+
+                    if (Value2 == 'Тирасполь') 
+                {
+                     alert("За тобой следят ты в матрице")
+                }      
+        }); 
+
+});                                           
+</script>
+                                                          
+</head>
+<body> 
+   
+    <FORM method="POST"> 
+
+
+<INPUT id="inp1"type="text" placeholder="Введите ФИО" size="40" name="i1"> <br/>
+<INPUT id="inp1"type="text" placeholder="Введите город" size="30"name="i2"><br/>
+<INPUT id="inp1"type="text" placeholder="Введите возраст" size="11"name="i3"><br/>
+<INPUT id="inp1" type="submit" value="Отправить данные" name="but123">
+<INPUT type="reset" value="Очистить форму"> 
+
+</FORM>
+
+</body>
+</html>

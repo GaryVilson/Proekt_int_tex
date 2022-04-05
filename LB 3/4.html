@@ -1,0 +1,77 @@
+<html> 
+    <head> 
+        <meta charset="utf-8" />
+         <title>JQUERY</title> 
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> 
+         <script> 
+            $ (document).ready( function () 
+            {                 
+                $("#displayText").click( function () 
+                 {                      
+                     alert ($("#myString").val ()); 
+                    });                     
+                $("#clearTextBox").dblclick( function () {                          
+                    $("#myString").val (''); });
+                    
+                         
+                         $("#myString").mouseover ( function () {
+                         $("p").text ('Вы навели мышку '); }) ;
+                         $("#myString").mouseout ( function () { 
+                             $("p").text ('Я за тобой слежу ты убрал мышку'); }) ; 
+                             
+//
+//
+                             $('select').change ( function () { 
+            var borderDivValue=$('#borderDiv :selected').val() ; 
+                if (borderDivValue == 'red') 
+                {
+                    $('#testForm').css (
+                        { 'border-color':'red', 
+                        'border-width': '2px' }); 
+                }
+                else
+                    {
+                    $('#testForm').css (
+                    { 'border-color':'green',
+                    'border-width': '5px' }); 
+                    }
+        }); 
+
+
+
+
+
+
+        // Здесь не важно, как мы скрываем текст.
+        // Также можно использовать style.display:
+       $("#hideTextBox").click (function(){$("#myString").css('visibility',"hidden");});
+       $("#hideTextBox").dblclick (function(){$("#myString").css('visibility',"visible");});
+
+       
+         
+                });
+     </script>
+    
+
+</head>
+
+<body>    
+     <div id="testForm" style="border: 2px solid red;
+     margin: 0 auto; 
+     width: 500px; text-align: center;">
+       <input id="myString" type="text" style="width: 500px;" 
+       placeholder="Вводи строку" /><br />
+        <input id="displayText" type="submit"
+         value="Вывод значения поля на экран" /><br /> 
+         <input id="clearTextBox" type="submit"
+         value="Очистить поле от всех значений dblclick " /><br />
+          <div><input id="hideTextBox" type="submit" value="Спрятать поле" />
+     </div> 
+          <select id="borderDiv"> 
+              <option value = "red">Нарисовать красную рамку</option> 
+              <option value = "green">Нарисовать зеленую рамку</option> 
+            </select>
+                <p id="statusTextBox"></p>
+            </div>
+         </body> 
+         </html>
