@@ -1,0 +1,104 @@
+<html>                                                                  
+<head>      
+    <style>
+        #clickme{width:300px; border:1px solid gray; padding:3px;
+             cursor:pointer}
+             #clickme1{width:160px; border:1px solid gray;
+         padding:3px; background-color:#eee; cursor:pointer}
+
+      </style>
+                                                             
+<script 
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
+</script>
+                                                         
+</head>
+<body>
+    <div>
+      <button>Кнопка 1</button>
+    </div>
+    <div>
+      <button>Кнопка 2</button>
+    </div>
+    <div>
+      <button>Кнопка 3</button>
+    </div>
+    <div id="msg"></div>
+    
+    <script>
+      $("button").click(function () {
+        $(this).parent().slideUp("slow", function () {
+          $("#msg").text($("button", this).text() + " скрыта.");
+        });
+      });
+    
+    </script>
+
+<p125>///////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+</p125>
+
+
+<div id="clickme">
+    Нажми на надпись
+  </div>
+  <img id="robot" src="123.jpg" alt=""/>
+  <div id="result"></div>
+  
+  <script>
+  $('#clickme').click(function(){
+    $('#robot').hide('slow', function() {
+      $('#result').html("....примерный текст <br>");
+  ;
+    });   
+  });
+  $('#clickme').dblclick(function(){
+    $('#robot').show('slow', function() {
+      $('#result').html("....примерный текст <br>");
+  ;
+    });
+});
+  </script>
+  <p125>///////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+</p125>
+<br><br>
+<button>Пуск</button><br><br>
+  <div1>
+    <img src="123.jpg" style="height:150px; float:right; margin:5px 5px">
+    <b>Правило.</b> Ё должна использоваться: в случаях возможных разночтений; в словарях; 
+    в книгах для изучающих русский язык (т. е. детей и иностранцев); для правильного 
+    прочтения редких топонимов, названий или фамилий. Во всех остальных случаях 
+    наличие буквы ё только затрудняет чтение. Она плохо выглядит, зато хорошо звучит.
+  </div1>
+<script>
+    $("button").click(function () {
+      $("div1").slideToggle("slow");
+    });
+</script>
+<p125>///////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////
+</p125>
+<br><br>
+    
+<div id="clickme1">
+    Получите уникальную методику обогащения, всего за 100 долларов
+  </div>
+  <img id="robot1" src="123.jpg" alt=""/>
+  <div id="result1"></div>
+  
+  <script>
+  $('#clickme1').click(function(){
+    $('#robot1').fadeOut('slow', function() {
+      $('#result1').html("Вот результат...");
+    });
+  });
+  </script>
+  
+  
+    </body>
+    
+</html>
